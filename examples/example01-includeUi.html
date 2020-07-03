@@ -31,13 +31,16 @@
                      path: 'img/sampleImage2.png',
                      name: 'SampleImage'
                  },
-                 theme: blackTheme, // or whiteTheme
+//                 theme: blackTheme, // or whiteTheme
                  initMenu: 'filter',
                  menuBarPosition: 'bottom'
              },
              cssMaxWidth: 700,
              cssMaxHeight: 500,
-             usageStatistics: false
+             usageStatistics: false,
+             onSave: (imgBlob) => {
+                 console.log('.......', imgBlob);  
+             }
          });
          window.onresize = function() {
              imageEditor.ui.resizeEditor();

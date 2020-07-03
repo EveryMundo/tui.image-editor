@@ -10,7 +10,7 @@ import action from './action';
 import commandFactory from './factory/command';
 import Graphics from './graphics';
 import consts from './consts';
-import {sendHostName} from './util';
+import util, {sendHostName} from './util';
 
 const events = consts.eventNames;
 const commands = consts.commandNames;
@@ -225,6 +225,18 @@ class ImageEditor {
             this.setReAction();
         }
         fabric.enableGLFiltering = false;
+        document.querySelector('.tui-image-editor-save-btn').addEventListener('click', () => {
+            const dataURL = this.toDataURL();
+            // let imageName = this.getImageName();
+            const blob = util.base64ToBlob(dataURL);
+            // const [type] = blob.type.split('/');
+            // if (imageName.split('.').pop() !== type) {
+            //    imageName += `.${type}`;
+            // } 
+            if (options.onSave) {
+                options.onSave(blob);
+            }
+        });
     }
 
     /**
