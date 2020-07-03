@@ -68,7 +68,7 @@ body > textarea {
   padding: 0;
   line-height: 40px;
   outline: none;
-  border-radius: 20px;
+  border-radius: 3px;
   border: 1px solid #ddd;
   font-family: 'Noto Sans', sans-serif;
   font-size: 12px;
@@ -79,8 +79,13 @@ body > textarea {
   text-align: center;
 }
 .tui-image-editor-container .tui-image-editor-download-btn {
-  background-color: #fdba3b;
-  border-color: #fdba3b;
+  background-color: #39f;
+  border-color: #39f;
+  color: #fff;
+}
+.tui-image-editor-container .tui-image-editor-save-btn {
+  background-color: #39f !important;
+  border-color: #39f !important;
   color: #fff;
 }
 .tui-image-editor-container .tui-image-editor-load-btn {
