@@ -12,6 +12,7 @@ export default ({biImage, commonStyle, headerStyle, loadButtonStyle, downloadBut
                 <button class="tui-image-editor-download-btn" style="${downloadButtonStyle}">
                     Download
                 </button>
+                <button class="tui-image-editor-save-btn">Save</button>
             </div>
         </div>
         <div class="tui-image-editor-main">
